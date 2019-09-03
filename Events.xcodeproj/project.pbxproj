@@ -7,14 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		715AEC49231D643B001C1843 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 715AEC48231D643B001C1843 /* Helpers.swift */; };
 		71798B9B231B0A5500100F02 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71798B9A231B0A5500100F02 /* AppDelegate.swift */; };
 		71798B9D231B0A5500100F02 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71798B9C231B0A5500100F02 /* ViewController.swift */; };
 		71798BA0231B0A5500100F02 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71798B9E231B0A5500100F02 /* Main.storyboard */; };
 		71798BA2231B0A5700100F02 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 71798BA1231B0A5700100F02 /* Assets.xcassets */; };
 		71798BA5231B0A5700100F02 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71798BA3231B0A5700100F02 /* LaunchScreen.storyboard */; };
+		71798BAF231B233200100F02 /* EventCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71798BAE231B233200100F02 /* EventCell.swift */; };
+		71798BB1231B27C500100F02 /* EventModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71798BB0231B27C500100F02 /* EventModel.swift */; };
+		718158BB231CBD0B00B7D4C8 /* addEventController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 718158BA231CBD0B00B7D4C8 /* addEventController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		715AEC48231D643B001C1843 /* Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
 		71798B97231B0A5500100F02 /* Events.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Events.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		71798B9A231B0A5500100F02 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		71798B9C231B0A5500100F02 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +27,9 @@
 		71798BA1231B0A5700100F02 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		71798BA4231B0A5700100F02 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		71798BA6231B0A5700100F02 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		71798BAE231B233200100F02 /* EventCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventCell.swift; sourceTree = "<group>"; };
+		71798BB0231B27C500100F02 /* EventModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventModel.swift; sourceTree = "<group>"; };
+		718158BA231CBD0B00B7D4C8 /* addEventController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addEventController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +43,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		715AEC47231D642B001C1843 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				715AEC48231D643B001C1843 /* Helpers.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		71798B8E231B0A5500100F02 = {
 			isa = PBXGroup;
 			children = (
@@ -54,14 +70,34 @@
 		71798B99231B0A5500100F02 /* Events */ = {
 			isa = PBXGroup;
 			children = (
+				715AEC47231D642B001C1843 /* Helpers */,
+				71798BAD231B231D00100F02 /* Models */,
+				71798BAC231B231300100F02 /* Controllers */,
 				71798B9A231B0A5500100F02 /* AppDelegate.swift */,
-				71798B9C231B0A5500100F02 /* ViewController.swift */,
 				71798B9E231B0A5500100F02 /* Main.storyboard */,
 				71798BA1231B0A5700100F02 /* Assets.xcassets */,
 				71798BA3231B0A5700100F02 /* LaunchScreen.storyboard */,
 				71798BA6231B0A5700100F02 /* Info.plist */,
 			);
 			path = Events;
+			sourceTree = "<group>";
+		};
+		71798BAC231B231300100F02 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				71798B9C231B0A5500100F02 /* ViewController.swift */,
+				718158BA231CBD0B00B7D4C8 /* addEventController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		71798BAD231B231D00100F02 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				71798BAE231B233200100F02 /* EventCell.swift */,
+				71798BB0231B27C500100F02 /* EventModel.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,7 +171,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				718158BB231CBD0B00B7D4C8 /* addEventController.swift in Sources */,
+				715AEC49231D643B001C1843 /* Helpers.swift in Sources */,
 				71798B9D231B0A5500100F02 /* ViewController.swift in Sources */,
+				71798BAF231B233200100F02 /* EventCell.swift in Sources */,
+				71798BB1231B27C500100F02 /* EventModel.swift in Sources */,
 				71798B9B231B0A5500100F02 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -282,7 +322,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = U362VU5AQ5;
 				INFOPLIST_FILE = Events/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -290,6 +332,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.tomasMoran.Events;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -299,7 +342,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = U362VU5AQ5;
 				INFOPLIST_FILE = Events/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -307,6 +352,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.tomasMoran.Events;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
